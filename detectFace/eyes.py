@@ -7,7 +7,8 @@ count = 1
 while(True):
     status, frame = video.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    faces = face_model.detectMultiScale(gray)
+    faces = face_model.detectMultiScale(gray, scaleFactor=1.5, minNeighbors=5)
+    print(len(faces))
     for (x, y, w, h) in faces:
         print('x: %s| y: %s | w: %s| h: %s'%(x,y,w,h))
         #BGR Color Frame
