@@ -1,15 +1,14 @@
 import cv2, uuid
 import os, re, time
+
+#Number photos
+number_photos = 10
+#Interval between 1st and 2nd photo capture
+time_interval = 1
+#Photo counter
+count = 1
 def main(camera=0):
-    #---|| SETTINGS ||---#
-    #Total number of photos required
-    number_photos = 10
-    #Total interval between 1st and 2nd photo capture
-    time_interval = 1
-    count = 1
-
     video = cv2.VideoCapture(camera)
-
     print('Enter Your Name:')
     name = input()
     dir_name = dirName(name)
@@ -22,7 +21,6 @@ def main(camera=0):
         key = cv2.waitKey(1)
         if count == number_photos:
             break
-
     cv2.destroyAllWindows()
             
 def dirName(name):
@@ -40,6 +38,5 @@ def saveImages(dir_name, frame):
     except Exception as e:
         print('Exception => %s'%e)
         return False, ''
-
 main()
         
