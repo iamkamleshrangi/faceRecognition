@@ -3,7 +3,7 @@ import os, re, time
 
 def main(camera=0):
     #Number photos
-     number_photos = 10
+    number_photos = 100
     #Interval between 1st and 2nd photo capture
     time_interval = 1
     #Photo counter
