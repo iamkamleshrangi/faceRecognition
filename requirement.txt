@@ -1,7 +1,4 @@
-certifi==2018.11.29
-chardet==3.0.4
-idna==2.8
 numpy==1.15.4
+opencv-contrib-python==4.0.0.21
 opencv-python==4.0.0.21
-requests==2.21.0
-urllib3==1.24.1
+Pillow==5.4.1
