@@ -1,13 +1,13 @@
 import cv2, uuid
 import os, re, time
 
-#Number photos
-number_photos = 10
-#Interval between 1st and 2nd photo capture
-time_interval = 1
-#Photo counter
-count = 1
 def main(camera=0):
+    #Number photos
+     number_photos = 10
+    #Interval between 1st and 2nd photo capture
+    time_interval = 1
+    #Photo counter
+    count = 1
     video = cv2.VideoCapture(camera)
     print('Enter Your Name:')
     name = input()
@@ -16,7 +16,7 @@ def main(camera=0):
         time.sleep(time_interval)
         status, frame = video.read() 
         saveImages(dir_name, frame)
-        print('Photo Count = %s'%count)
+        print('Photo Count = %s'%(count))
         count += 1
         key = cv2.waitKey(1)
         if count == number_photos:
